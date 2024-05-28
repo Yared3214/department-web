@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Registration</title>
+  <link rel="stylesheet" href="regis.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Logo</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Course Registration</a>
+      <a href="#">Announcements</a>
+      <a href="#">Research</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Course Registration</h1>
+    <form method="post" action="process_registration.php">
+      <div class="form-group">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required>
+      </div>
+      <div class="form-group">
+        <label for="student-id">Student ID:</label>
+        <input type="text" id="student-id" name="student-id" required>
+      </div>
+      <div class="form-group">
+        <label for="year">Year:</label>
+        <select id="year" name="year" required>
+          <option value="">Select Year</option>
+          <option value="1">First Year</option>
+          <option value="2">Second Year</option>
+          <option value="3">Third Year</option>
+          <option value="4">Fourth Year</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="semester">Semester:</label>
+        <select id="semester" name="semester" required>
+          <option value="">Select Semester</option>
+          <option value="1">First semester</option>
+          <option value="2">Second semester</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Courses:</label>
+        <ul class="course-list">
+          <li>
+            <input type="checkbox" id="course1" name="courses[]" value="web">
+            <label for="course1">Web Development</label>
+          </li>
+          <li>
+            <input type="checkbox" id="course2" name="courses[]" value="algorithm">
+            <label for="course2">Analysis of algorith</label>
+          </li>
+          <li>
+            <input type="checkbox" id="course3" name="courses[]" value="CG">
+            <label for="course3">Computer Graphics</label>
+          </li>
+          <li>
+            <input type="checkbox" id="course4" name="courses[]" value="sysadmin">
+            <label for="course4">Network and System Admistration</label>
+          </li>
+          <li>
+            <input type="checkbox" id="course5" name="courses[]" value="Entrepreneurship">
+            <label for="course5">Entrepreneurship</label>
+          </li>
+          <li>
+            <input type="checkbox" id="course6" name="courses[]" value="OS">
+            <label for="course6">Operating System</label>
+          </li>
+          <!-- Add more courses as needed -->
+        </ul>
+      </div>
+      <input class="register" type="submit" value="Register"/>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2023 Computer Science Department</p>
+  </footer>
+</body>
+</html>
